@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="container">
-        <form action="https://formsubmit.co/preethirajavel06@gmail.com" method="POST" >
+        <form onsubmit="sendMail(); reset(); return false;" >
             <h2>Contact Us!</h2>
             <input type="text" name="name" id="name" placeholder="Name" autocomplete="off" required>
             <input type="email" name="email" id="email" placeholder="Email ID" autocomplete="off" required>
@@ -19,6 +19,33 @@
            <button id="btn"type="submit" >Send</button>
         </form>
     </div>
+    
+    <script src="https://smtpjs.com/v3/smtp.js"> </script>
+
+    <script>
+         function sendMail(){
+            
+
+            Email.send({
+                ///SecureToken:"cb1a4bee-31f3-449b-b60c-0c84f6840749 ",
+                Host : "smtp.elasticemail.com",
+                Username : "preethirajavel06@gmail.com",
+                Password : "A00E9D19FDFA7B512437F0839DA7510B42E8",
+                To : 'preethirajavel06@gmail.com',
+                From : document.getElementById("email").value,
+                Subject : "Contact message",
+                Body : "Name: " + document.getElementById("name").value
+                        + "<br> Email " + document.getElementById("email").value
+                        + "<br> Phone no: " + document.getElementById("phno").value 
+                        + "<br> Message: " + document.getElementById("mgs").value
+            }).then(
+                message => alert(message)
+            ); 
+         }
+       
+    
+    </script>
+
     
     
 </body> 
