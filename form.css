@@ -1,15 +1,15 @@
 body{
-    margin: 0;
+    border: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing:border-box;
+    font-family:Georgia, 'Times New Roman', Times, serif;
 }
-
 
 .container{
     width: 100%;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     background-color: bisque;
     justify-content: center;
     align-items: center;
@@ -24,13 +24,6 @@ form{
     max-width: 600px;
     border-radius: 5px;
 }
-
-form h2{
-    color:darkmagenta;
-    text-align: center;
-    font-weight: 900;
-    margin-bottom: 20px;
-} 
 
 form input, form textarea{
     background-color:beige;
@@ -54,4 +47,11 @@ form button{
     width: 130px;
     margin: 10px auto 0;
     cursor: pointer;
+}
+
+form h2{
+    color:darkmagenta;
+    text-align: center;
+    font-weight: 900;
+    margin-bottom: 20px;
 }
