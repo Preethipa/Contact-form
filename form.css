@@ -20,7 +20,7 @@ form{
     display: flex;
     flex-direction: column;
     padding:2vw 4vw;
-    width: 70%;
+    width: 80%;
     max-width: 600px;
     border-radius: 5px;
 }
@@ -29,10 +29,29 @@ form input, form textarea{
     background-color:beige;
     margin-bottom: 10px;
     padding:1rem 0.8rem;
+    width:95%;
     border: 0;
     outline: none;
     border-radius: 3px;
     font-family:monospace;
+}
+
+.ip-control input:focus{
+    outline:0;
+}
+
+.ip-control.success input{
+    border-color: #09c372;
+}
+
+.ip-control.error input {
+    border-color: #ff3860;
+}
+
+.ip-control .error{
+    color:#ff3860;
+    font-size: 8px;
+    height:10px;
 }
 
 form button{

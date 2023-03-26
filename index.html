@@ -10,16 +10,33 @@
 </head>
 <body>
     <div class="container">
-        <form action="https://formsubmit.co/preethirajavel06@gmail.com" method="POST">
+        <form id="form" action="https://formsubmit.co/preethirajavel06@gmail.com" method="POST">
             <h2>Contact Us!</h2>
-            <input type="text" name="name" id="name" placeholder="Name" autocomplete="off" required>
-            <input type="email" name="email" id="email" placeholder="Email ID" autocomplete="off" required>
-            <input type="number" name="number" id="phno" placeholder="Phone Number" autocomplete="off" required>
-            <textarea name="message" id="mgs" rows="3" placeholder="How can we help you?" autocomplete="off" required></textarea> 
-            <button id="btn"type="submit" >Send</button>
+            <div class="ip-control">
+                <input type="text" name="name" id="name" placeholder="Name" required>
+                <div class="error"></div>
+            </div>
+
+            <div class="ip-control">
+                <input type="email" name="email" id="email" placeholder="Email ID"  required>
+                <div class="error"></div>
+            </div>
+            
+            <div class="ip-control">
+                <input type="number" name="number" id="phno" placeholder="Phone Number"  required>
+                <div class="error"></div>
+            </div>
+            
+            <div class="ip-control">
+                <textarea name="message" id="mgs" rows="3" placeholder="How can we help you?"  required></textarea>
+                <div class="error"></div> 
+            </div>
+            
+            <button type="submit" >Send</button>
         </form>
     </div>
     
+    <script src="form.js"></script>
     <!--<script src="https://smtpjs.com/v3/smtp.js"> </script>
 
     <script>
